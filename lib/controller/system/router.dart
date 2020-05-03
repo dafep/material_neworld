@@ -6,7 +6,7 @@ class Navigate {
     Navigator.pushNamed(context, route);
   }
 
-  static initialRoute({RouteSettings settings, Map<String, dynamic> map}) {
+  static initRoute({RouteSettings settings, Map<String, dynamic> map}) {
     return generateRoute(
       settings: settings,
       map: map,
