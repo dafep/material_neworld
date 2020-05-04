@@ -13,6 +13,7 @@ class Input extends StatelessWidget {
   final double widthBorderBottom;
   final double widthBorderLeft;
   final double widthBorderRight;
+  final double padding;
   final Color borderColor;
 
   Input({
@@ -29,6 +30,7 @@ class Input extends StatelessWidget {
     this.widthBorderLeft,
     this.widthBorderRight,
     this.borderColor,
+    this.padding,
   });
 
   @override
@@ -36,6 +38,7 @@ class Input extends StatelessWidget {
     return new Container(
       width: width ?? MediaQuery.of(context).size.width,
       height: height ?? 50,
+      padding: EdgeInsets.all(padding ?? 0),
       decoration: BoxDecoration(
         color: backgroundColor ?? Colors.transparent,
         borderRadius: BorderRadius.all(
@@ -61,17 +64,14 @@ class Input extends StatelessWidget {
         ),
       ),
       child: new Center(
-        child: new Padding(
-          padding: const EdgeInsets.only(left: 10, right: 10),
-          child: new TextField(
-            controller: controller,
-            decoration: InputDecoration(
-              border: InputBorder.none,
-              hintText: placeholder,
-            ),
-            keyboardType: inputType ?? TextInputType.text,
-            obscureText: obscure ?? false,
+        child: new TextField(
+          controller: controller,
+          decoration: InputDecoration(
+            border: InputBorder.none,
+            hintText: placeholder,
           ),
+          keyboardType: inputType ?? TextInputType.text,
+          obscureText: obscure ?? false,
         ),
       ),
     );
