@@ -3,6 +3,7 @@ library material_neworld;
 /* Style */
 
 export "controller/style/body.dart";
+export "controller/style/input.dart";
 
 /* Firebase */
 
