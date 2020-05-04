@@ -9,7 +9,10 @@ class Input extends StatelessWidget {
   final bool obscure;
   final Color backgroundColor;
   final double radius;
-  final double widthBorder;
+  final double widthBorderTop;
+  final double widthBorderBottom;
+  final double widthBorderLeft;
+  final double widthBorderRight;
   final Color borderColor;
 
   Input({
@@ -21,7 +24,10 @@ class Input extends StatelessWidget {
     this.obscure,
     this.backgroundColor,
     this.radius,
-    this.widthBorder,
+    this.widthBorderTop,
+    this.widthBorderBottom,
+    this.widthBorderLeft,
+    this.widthBorderRight,
     this.borderColor,
   });
 
@@ -35,7 +41,24 @@ class Input extends StatelessWidget {
         borderRadius: BorderRadius.all(
           Radius.circular(radius ?? 0),
         ),
-        border: Border.all(width: widthBorder ?? 0, color: borderColor ?? Colors.transparent)
+        border: Border(
+          top: BorderSide(
+            color: borderColor ?? Colors.transparent,
+            width: widthBorderTop ?? 0,
+          ),
+          bottom: BorderSide(
+            color: borderColor ?? Colors.transparent,
+            width: widthBorderBottom ?? 0,
+          ),
+          left: BorderSide(
+            color: borderColor ?? Colors.transparent,
+            width: widthBorderLeft ?? 0,
+          ),
+          right: BorderSide(
+            color: borderColor ?? Colors.transparent,
+            width: widthBorderRight ?? 0,
+          ),
+        ),
       ),
       child: new Center(
         child: new Padding(

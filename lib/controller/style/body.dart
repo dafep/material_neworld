@@ -4,7 +4,8 @@ class Body extends StatelessWidget {
   final Widget child;
   final double width;
   final double height;
-  Body({@required this.child, this.height, this.width});
+  final String imageUrl;
+  Body({@required this.child, this.height, this.width, this.imageUrl});
 
   @override
   Widget build(BuildContext context) {
@@ -12,6 +13,12 @@ class Body extends StatelessWidget {
       body: new Container(
         width: width ?? MediaQuery.of(context).size.width,
         height: height ?? MediaQuery.of(context).size.height,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(imageUrl ?? null),
+            fit: BoxFit.cover,
+          ),
+        ),
         child: child,
       ),
     );
