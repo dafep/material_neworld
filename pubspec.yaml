@@ -11,6 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   page_transition: ^1.1.5
+  firebase_auth: ^0.15.5+3
 
 dev_dependencies:
   flutter_test:
