@@ -4,6 +4,7 @@ library material_neworld;
 
 export "controller/style/body.dart";
 export "controller/style/input.dart";
+export "controller/style/button.dart";
 
 /* Firebase */
 
