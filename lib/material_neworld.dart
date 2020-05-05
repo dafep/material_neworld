@@ -14,4 +14,8 @@ export "controller/firebase/auth.dart";
 
 export "controller/system/device.dart";
 export "controller/system/router.dart";
-export "controller/system/BodyController.dart";
+
+/* Compenent */
+
+export "controller/compenent/BodyController.dart";
+export "controller/compenent/splashScreen.dart";
