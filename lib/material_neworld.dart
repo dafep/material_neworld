@@ -14,6 +14,7 @@ export "controller/firebase/auth.dart";
 
 export "controller/system/device.dart";
 export "controller/system/router.dart";
+export "controller/system/image.dart";
 
 /* Compenent */
 
