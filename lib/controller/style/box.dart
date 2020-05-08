@@ -19,6 +19,7 @@ class Box extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Container(
       width: width ?? MediaQuery.of(context).size.width,
+      height: height ?? null,
       decoration: BoxDecoration(
         color: color ?? Colors.transparent,
       ),
