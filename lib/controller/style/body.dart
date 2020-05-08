@@ -17,7 +17,7 @@ class Body extends StatelessWidget {
         decoration: BoxDecoration(
           color: color ?? Colors.transparent,
           image: DecorationImage(
-            image: AssetImage(imageUrl ?? ""),
+            image: imageUrl != "" ? AssetImage(imageUrl) : null,
             fit: BoxFit.cover,
           ),
         ),
