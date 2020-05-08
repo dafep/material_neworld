@@ -21,10 +21,6 @@ class Box extends StatelessWidget {
       width: width ?? MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
         color: color ?? Colors.transparent,
-        image: DecorationImage(
-          image: image != "" ? new AssetImage(image) : null,
-          fit: BoxFit.cover,
-        ),
       ),
       child: child ?? new Container(),
     );

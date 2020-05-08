@@ -16,10 +16,6 @@ class Body extends StatelessWidget {
         height: height ?? MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
           color: color ?? Colors.transparent,
-          image: DecorationImage(
-            image: imageUrl != "" ? AssetImage(imageUrl) : null,
-            fit: BoxFit.cover,
-          ),
         ),
         child: child,
       ),
