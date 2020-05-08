@@ -18,7 +18,7 @@ class Body extends StatelessWidget {
         decoration: BoxDecoration(
           color: color ?? Colors.transparent,
           gradient: LinearGradient(
-            colors: gradient != null ? gradient : null,
+            colors: gradient ?? [Colors.transparent, Colors.transparent],
           ),
         ),
         child: child,
