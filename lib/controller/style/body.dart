@@ -6,7 +6,8 @@ class Body extends StatelessWidget {
   final double height;
   final String imageUrl;
   final Color color;
-  Body({@required this.child, this.height, this.width, this.imageUrl, this.color});
+  final List<Color> gradient;
+  Body({@required this.child, this.height, this.width, this.imageUrl, this.color, this.gradient});
 
   @override
   Widget build(BuildContext context) {
@@ -16,6 +17,9 @@ class Body extends StatelessWidget {
         height: height ?? MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
           color: color ?? Colors.transparent,
+          gradient: LinearGradient(
+            colors: gradient != null ? gradient : null,
+          ),
         ),
         child: child,
       ),
