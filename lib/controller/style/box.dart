@@ -22,7 +22,7 @@ class Box extends StatelessWidget {
       decoration: BoxDecoration(
         color: color ?? Colors.transparent,
         image: DecorationImage(
-          image: new AssetImage(image ?? null),
+          image: new AssetImage(image ?? ""),
           fit: BoxFit.cover,
         ),
       ),
